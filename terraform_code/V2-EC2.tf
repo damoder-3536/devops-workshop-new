@@ -6,11 +6,11 @@ resource "aws_instance" "demo-server" {
   ami = "ami-08a52ddb321b32a8c"
   instance_type = "t2.micro"
   key_name = "demo"
-  security_groups = [ "ssh access" ]
+  security_groups = [ "ssh-access" ]
 }
 
-resource "aws_security_group" "ssh access" {
-  name        = "ssh access"
+resource "aws_security_group" "ssh-access" {
+  name        = "ssh-access"
   description = "ssh access"
 
 
@@ -32,6 +32,6 @@ resource "aws_security_group" "ssh access" {
   }
 
   tags = {
-    Name = "ssh access"
+    Name = "ssh-access"
   }
 }
